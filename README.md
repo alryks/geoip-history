@@ -51,10 +51,15 @@ This Python script tracks the historical location of IP addresses using GeoIP da
 
 ## Usage
 
-1. **Save the `geoip` executable:**  Place the `geoip` executable in a suitable location or add its directory to your system's PATH.
+1. **Save the `geoip` executable:**  Place the `geoip` executable in a suitable location.
 
+2. **Set your GitHub token:** Create `.env` file with `GITHUB_TOKEN=<YOUR_TOKEN>` in it.
+   
+   OR
 
-2. **Run the script:**
+   **Run script with environmental variable:** `GITHUB_TOKEN=<YOUR_TOKEN> python main.py ...`
+
+4. **Run the script:**
    ```bash
    python main.py <IP_ADDRESS_1> <IP_ADDRESS_2> ... [OPTIONS] 
    ```
@@ -67,7 +72,7 @@ This Python script tracks the historical location of IP addresses using GeoIP da
 * `--owner <owner>`: Specify the GitHub repository owner (default: v2fly).
 * `--repo <repo>`: Specify the GitHub repository name (default: geoip).
 * `--filename <filename>`: Specify the GeoIP database filename within the releases (default: geoip.dat).
-* `--exec <path/to/geoip>`: Specify the path to the `geoip` executable. (Required if it's not in your PATH)
+* `--exec <path/to/geoip>`: Specify the path to the `geoip` executable.
 * `--verbose`: Enable verbose output.
 
 
